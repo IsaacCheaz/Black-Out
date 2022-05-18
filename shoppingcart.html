@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Out</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png"/>
+    <script src="shoppingcart.js"></script>
+    <style>
+        /*PC*/
+        body{
+            background-color: rgba(255, 192, 203, 0.151);
+        }
+        header{
+            background-color: burlywood;
+            position: fixed;
+            padding: 8px;
+            top: 15px;
+            left: 0;
+            width: 100%;
+        }
+        nav{
+            float: left;
+            width: 100%;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            margin: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        a:hover{
+            color: bisque;
+        }
+        h1{
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        hr{
+            width: 600px;
+            color: brown;
+        }
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .purchase{
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin: 30px 10px;
+            min-width: 1200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .purchase thead tr{
+            background-color: burlywood;
+            height: 50px;
+            color: black;
+            text-align: left;
+        }
+        .purchase input{
+            width: 100px;
+            height: 25px;
+        }
+        .purchase img{
+            height: 150px;
+            width: 150px;
+        }
+        .purchase td{
+            padding: 10px;
+        }
+        .purchase tbody tr{
+            border-bottom: 1px solid gray;
+        }
+        .purchase tbody tr:nth-of-type(even){
+            background-color: rgb(255, 221, 176);
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        #total{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        #total2{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        #total3{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        #end{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu"></div>
+        <div class="menu"></div>
+        <div class="menu"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="shoppingcart.html">Shopping Cart</a>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <center>
+    <h1><b>SHOPPING CART</b></h1>
+    <br>
+    <h3>Men's Section</h3>
+    <table class="purchase">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="menc1.jpg"></td>
+                <td>"Black-Out" Men's T-shirt</td>
+                <td>15$</td>
+                <td><input type="number" value="0" id="men1"></td>
+            </tr>
+            <tr>
+                <td><img src="menc2.jpg"></td>
+                <td>"Black-Out" Men's Jacket</td>
+                <td>50$</td>
+                <td><input type="number" value="0" id="men2"></td>
+            </tr>
+            <tr>
+                <td><img src="menc3.jpg"></td>
+                <td>"Black-Out" Men's Jeans</td>
+                <td>20$</td>
+                <td><input type="number" value="0" id="men3"></td>
+            </tr>
+            <tr>
+                <td><img src="menc4.jpg"></td>
+                <td>"Black-Out" Men's Sweatshirt</td>
+                <td>30$</td>
+                <td><input type="number" value="0"id="men4"></td>
+            </tr>
+            <tr>
+                <td><img src="menc5.png"></td>
+                <td>"Black-Out" Men's T-shirt</td>
+                <td>25$</td>
+                <td><input type="number" value="0" id="men5"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="total()">Calculate</button>
+    <span id="total">Total: </span>
+    <br>
+    <br>
+    <br>
+    <h3>Women's Section</h3>
+    <table class="purchase">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="womenc1.png"></td>
+                <td>"Black-Out" Women's T-shirt</td>
+                <td>17$</td>
+                <td><input type="number" value="0" id="wmen1"></td>
+            </tr>
+            <tr>
+                <td><img src="womenc2.png"></td>
+                <td>"Black-Out" Women's Jacket</td>
+                <td>25$</td>
+                <td><input type="number" value="0" id="wmen2"></td>
+            </tr>
+            <tr>
+                <td><img src="womenc3.webp"></td>
+                <td>"Black-Out" Women's Jeans</td>
+                <td>20$</td>
+                <td><input type="number" value="0" id="wmen3"></td>
+            </tr>
+            <tr>
+                <td><img src="womenc4.webp"></td>
+                <td>"Black-Out" Women's Sweatshirt</td>
+                <td>30$</td>
+                <td><input type="number" value="0" id="wmen4"></td>
+            </tr>
+            <tr>
+                <td><img src="womenc5.jpg"></td>
+                <td>"Black-Out" Women's Jeans</td>
+                <td>25$</td>
+                <td><input type="number" value="0" id="wmen5"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="total2()">Calculate</button>
+    <span id="total2">Total: </span>
+    <br>
+    <br>
+    <br>
+    <h3>Kid's Section</h3>
+    <table class="purchase">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="kids1.jpg"></td>
+                <td>"Black-Out" Kid's T-shirt</td>
+                <td>15$</td>
+                <td><input type="number" value="0" id="kid1"></td>
+            </tr>
+            <tr>
+                <td><img src="kids2.jpg"></td>
+                <td>"Black-Out" Kid's T-Shirt v2</td>
+                <td>24  $</td>
+                <td><input type="number" value="0" id="kid2"></td>
+            </tr>
+            <tr>
+                <td><img src="kids3.jpg"></td>
+                <td>"Black-Out" Kid's Shirt</td>
+                <td>20$</td>
+                <td><input type="number" value="0" id="kid3"></td>
+            </tr>
+            <tr>
+                <td><img src="kids4.jpg"></td>
+                <td>"Black-Out" Kid's Jacket</td>
+                <td>40$</td>
+                <td><input type="number" value="0" id="kid4"></td>
+            </tr>
+            <tr>
+                <td><img src="kids5.jpg"></td>
+                <td>"Black-Out" Kid's Hoodie</td>
+                <td>30$</td>
+                <td><input type="number" value="0" id="kid5"></td>
+            </tr>
+            <tr>
+                <td><img src="kids 6.jpg"></td>
+                <td>"Black-Out" Kid's Jeans</td>
+                <td>20-25$</td>
+                <td><input type="number" value="0" id="kid6"></td>
+            </tr>
+            <tr>
+                <td><img src="kids7.jpg"></td>
+                <td>"Black-Out" Kid's Pants</td>
+                <td>20$</td>
+                <td><input type="number" value="0" id="kid7"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="total3()">Calculate</button>
+    <span id="total3">Total: </span>
+    <br>
+    <br>
+    <br>
+    <p id="end">WHEN FINISHED SELECTING ALL YOUR PRODUCTS (INCLUDES ALL SECTIONS) PLEASE CLICK PURCHASE TO COMPLETE THE TRANSACTION! </p>
+    <br>
+    <button onclick="window.location.href='ThankYou.html'">Purchase</button>
+    <br>
+    <br>
+    <object></object>
+    </center>
+</html>
